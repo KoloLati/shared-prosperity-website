@@ -49,11 +49,11 @@
   .logo-word .tag{display:block;font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;font-weight:500;opacity:.75;font-family:'Helvetica Neue',Arial,sans-serif;}
 
   /* ---------- HEADER ---------- */
-  header{background:var(--navy);padding:16px 0;}
+  header{background:#fff;padding:16px 0;border-bottom:1px solid var(--line);}
   .topbar{display:flex;align-items:center;justify-content:space-between;}
   nav ul{list-style:none;display:flex;gap:26px;margin:0;padding:0;}
-  nav a{color:#D8D5E8;font-size:13.5px;font-weight:500;}
-  nav a:hover{color:#fff;}
+  nav a{color:#4a4636;font-size:13.5px;font-weight:500;}
+  nav a:hover{color:var(--purple);}
   .header-right{display:flex;align-items:center;gap:18px;}
 
   /* ---------- HERO ---------- */
@@ -136,6 +136,26 @@
   .vision-card{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:26px 18px;text-align:center;display:flex;align-items:center;justify-content:center;min-height:90px;}
   .vision-card h4{font-size:16px;color:var(--teal);font-family:Georgia,serif;line-height:1.35;}
 
+  /* ---------- OUR IMPACT ---------- */
+  .impact{background:var(--paper);border-top:1px solid var(--line);}
+  .impact .eyebrow{color:var(--purple);}
+  .impact .section-head{max-width:760px;}
+
+  /* ---------- AMERICA 250 ---------- */
+  .america250{background:var(--navy);color:#fff;}
+  .america250 .eyebrow{color:var(--gold);}
+  .america250 .section-head{max-width:760px;}
+  .america250 .section-head p{color:#C7C3DA;}
+  .america250-images{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px;}
+  .america250-images div{background:#1F2747;border-radius:8px;padding:24px;display:flex;flex-direction:column;align-items:center;gap:10px;}
+  .america250-images .imgcap{font-size:11.5px;color:#B7B3D6;text-align:center;}
+
+  /* ---------- TEAM ---------- */
+  .team{background:var(--cream);}
+  .team .eyebrow{color:var(--brick);}
+  .team-status{border:1.5px dashed #d8cf9e;border-radius:8px;padding:36px;text-align:center;background:#fff;}
+  .team-status .when{font-size:11px;color:#a39b78;text-transform:uppercase;letter-spacing:.06em;font-weight:700;}
+
   /* ---------- PROGRAMS ---------- */
   .live-card{border:2px solid var(--teal);border-radius:8px;padding:20px 22px;display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:30px;}
   .live-card h3{font-size:18px;margin:6px 0 8px;}
@@ -188,12 +208,12 @@
   .news-form input{flex:1;padding:11px 14px;border-radius:5px;border:1px solid #3a3f63;background:#222850;color:#fff;font-size:13px;}
 
   /* ---------- FOOTER ---------- */
-  footer{background:var(--navy-2);color:#A9A6C2;padding:34px 0;}
+  footer{background:#fff;color:#56524a;padding:34px 0;border-top:1px solid var(--line);}
   .footer-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:22px;}
   .footer-cols{display:flex;gap:48px;}
-  .footer-cols h5{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:#7d7aa0;margin-bottom:10px;}
+  .footer-cols h5{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:#8a8676;margin-bottom:10px;}
   .footer-cols ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;font-size:12.5px;}
-  .footer-bottom{border-top:1px solid #2c3158;padding-top:16px;font-size:11.5px;color:#6f6c92;}
+  .footer-bottom{border-top:1px solid var(--line);padding-top:16px;font-size:11.5px;color:#8a8676;}
 
   @media (max-width:760px){
     .hero-grid,.story-grid,.logo-panels,.ep-grid,.program-grid,.horizon-grid,.kids-hero-grid{grid-template-columns:1fr;}
@@ -207,17 +227,7 @@
 <header>
   <div class="wrap topbar">
     <div class="logo-lockup">
-      <span class="logo-mark">
-        <svg width="34" height="34" viewBox="0 0 100 100" fill="none">
-          <circle cx="50" cy="58" r="28" stroke="#B79AE0" stroke-width="6"/>
-          <path d="M50 22 L66 50 L34 50 Z" fill="#B79AE0"/>
-          <circle cx="76" cy="26" r="7" fill="#E8A93B"/>
-        </svg>
-      </span>
-      <span class="logo-word" style="color:#fff;">
-        <span class="top">Shared Prosperity</span>
-        <span class="tag" style="color:#B7B3D6;">Local America · Global Opportunity</span>
-      </span>
+      <img src="logo-full-transparent-cropped.png" alt="Shared Prosperity — Local America, Global Opportunity" style="height:48px;width:auto;filter:saturate(1.4) contrast(1.15);">
     </div>
     <nav>
       <ul>
@@ -257,76 +267,6 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- LOGO SHOWCASE -->
-<section class="logo-showcase">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Brand Mark</div>
-      <h2>The two ways the logo appears.</h2>
-      <p>A full lockup (mark + name) for headers, intros, and anywhere the brand is being introduced — and an icon-only mark for tight spaces like favicons, social avatars, and the footer.</p>
-    </div>
-
-    <div class="logo-panels">
-      <div class="logo-panel light">
-        <div class="logo-lockup">
-          <svg width="44" height="44" viewBox="0 0 100 100" fill="none">
-            <circle cx="50" cy="58" r="28" stroke="#6B3FA0" stroke-width="6"/>
-            <path d="M50 22 L66 50 L34 50 Z" fill="#6B3FA0"/>
-            <circle cx="76" cy="26" r="7" fill="#E8A93B"/>
-          </svg>
-          <span class="logo-word" style="color:#181E39;">
-            <span class="top" style="font-size:20px;">Shared Prosperity</span>
-            <span class="tag" style="color:#7a7670;">Local America · Global Opportunity</span>
-          </span>
-        </div>
-        <div class="caption">Full lockup — on light backgrounds</div>
-      </div>
-      <div class="logo-panel dark">
-        <div class="logo-lockup">
-          <svg width="44" height="44" viewBox="0 0 100 100" fill="none">
-            <circle cx="50" cy="58" r="28" stroke="#B79AE0" stroke-width="6"/>
-            <path d="M50 22 L66 50 L34 50 Z" fill="#B79AE0"/>
-            <circle cx="76" cy="26" r="7" fill="#E8A93B"/>
-          </svg>
-          <span class="logo-word" style="color:#fff;">
-            <span class="top" style="font-size:20px;">Shared Prosperity</span>
-            <span class="tag" style="color:#B7B3D6;">Local America · Global Opportunity</span>
-          </span>
-        </div>
-        <div class="caption">Full lockup — on dark backgrounds</div>
-      </div>
-    </div>
-
-    <div class="icon-row">
-      <div>
-        <svg width="64" height="64" viewBox="0 0 100 100" fill="none">
-          <circle cx="50" cy="58" r="28" stroke="#6B3FA0" stroke-width="6"/>
-          <path d="M50 22 L66 50 L34 50 Z" fill="#6B3FA0"/>
-          <circle cx="76" cy="26" r="7" fill="#E8A93B"/>
-        </svg>
-        <div class="icon-size-label">Icon only — large</div>
-      </div>
-      <div>
-        <svg width="40" height="40" viewBox="0 0 100 100" fill="none">
-          <circle cx="50" cy="58" r="28" stroke="#6B3FA0" stroke-width="6"/>
-          <path d="M50 22 L66 50 L34 50 Z" fill="#6B3FA0"/>
-          <circle cx="76" cy="26" r="7" fill="#E8A93B"/>
-        </svg>
-        <div class="icon-size-label">Medium</div>
-      </div>
-      <div style="background:#181E39;border-radius:8px;padding:10px;">
-        <svg width="28" height="28" viewBox="0 0 100 100" fill="none">
-          <circle cx="50" cy="58" r="28" stroke="#B79AE0" stroke-width="6"/>
-          <path d="M50 22 L66 50 L34 50 Z" fill="#B79AE0"/>
-          <circle cx="76" cy="26" r="7" fill="#E8A93B"/>
-        </svg>
-        <div class="icon-size-label" style="color:#9b97b8;">Favicon / avatar size</div>
-      </div>
-    </div>
-    <div class="usage-note">This is a placeholder mark — a small city pin rising over a globe, with a gold accent — standing in until a final logo is designed. Swap the SVG in the header, footer, and here once you have artwork you like.</div>
   </div>
 </section>
 
@@ -441,6 +381,40 @@
   </div>
 </section>
 
+<!-- AMERICA 250 -->
+<section class="america250">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">America's 250th</div>
+      <h2>Celebrate America's 250th with a Value-Driven Mission.</h2>
+      <p>As our nation approaches its 250 years, the true enduring vision of America remains rooted in the promise that equal opportunity and collective progress are created, not given. Shared Prosperity honors this legacy by proving that the future of American economic resilience is still written at the local level. By transforming the decisions of our small-city leaders into actionable blueprints, we are ensuring that the next chapter of the American story is one where local opportunity still shapes global wealth — proving that when our hometowns thrive, their ideas, skills, and innovations lift communities across the country and beyond.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OUR IMPACT -->
+<section class="impact">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Our Impact</div>
+      <p>Through the support of our partners and collaborators, Shared Prosperity transforms small-city leadership decisions into public understanding and actionable civic insights that benefit our own community, regions across the country, and beyond.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Our Team</div>
+      <h2>Meet The Minds and Hands Behind Our Venture.</h2>
+    </div>
+    <div class="team-status">
+      <div class="when">When the Time Is Right</div>
+    </div>
+  </div>
+</section>
+
 <!-- PROGRAMS -->
 <section id="programs">
   <div class="wrap">
@@ -452,7 +426,7 @@
     <div class="live-card">
       <div>
         <span class="badge live-tag">Live now</span>
-        <h3>The Shared Prosperity Media Venture</h3>
+        <h3>Shared Prosperity Media Venture</h3>
         <p>A monthly video series pairing a host-led Brief Talk with a Conversation with a local decision-maker. Recorded at Pittsfield Community Television and Taconic High School. Aired on PCTV and shared on our own YouTube channel.</p>
         <div class="meta-row"><span>3 episodes released</span><span>2 formats per episode</span><span>Partners: PCTV · Taconic High School</span><span>New episodes roughly twice a month through Nov 2026</span></div>
       </div>
@@ -580,12 +554,7 @@
   <div class="wrap">
     <div class="footer-top">
       <div class="logo-lockup">
-        <svg width="26" height="26" viewBox="0 0 100 100" fill="none">
-          <circle cx="50" cy="58" r="28" stroke="#7C5BB0" stroke-width="6"/>
-          <path d="M50 22 L66 50 L34 50 Z" fill="#7C5BB0"/>
-          <circle cx="76" cy="26" r="7" fill="#E8A93B"/>
-        </svg>
-        <span style="font-family:Georgia,serif;font-weight:700;font-size:14px;color:#D6D3E8;">Shared Prosperity</span>
+        <img src="logo-icon2-transparent-cropped.png" alt="Shared Prosperity" style="height:50px;width:auto;filter:saturate(1.3) contrast(1.08);">
       </div>
       <div class="footer-cols">
         <div>
@@ -620,7 +589,7 @@
         </div>
       </div>
     </div>
-    <div class="footer-bottom">© 2026 Shared Prosperity Media Venture. A civic media project rooted in Pittsfield, Massachusetts.</div>
+    <div class="footer-bottom">© 2026 Shared Prosperity Media Venture.</div>
   </div>
 </footer>
 
