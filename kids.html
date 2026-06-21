@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shared Prosperity Kids — Local America, Global Opportunity</title>
+<style>
+  :root{
+    --navy:#181E39;
+    --navy-2:#1F2747;
+    --purple:#6B3FA0;
+    --purple-dark:#5A2F8C;
+    --teal:#1E7A6C;
+    --brick:#9B3D24;
+    --gold:#E8A93B;
+    --cream:#F6E6B4;
+    --cream-2:#F1DD9E;
+    --ink:#1B1B1B;
+    --paper:#FBFAF6;
+    --line:#E7E2D4;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'Helvetica Neue',Arial,sans-serif;color:var(--ink);background:var(--paper);}
+  h1,h2,h3,h4{margin:0;font-family:Georgia,'Times New Roman',serif;}
+  p{margin:0;line-height:1.55;}
+  a{text-decoration:none;color:inherit;}
+  .eyebrow{
+    font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px;}
+  .btn{
+    display:inline-block;padding:11px 20px;border-radius:5px;font-size:14px;font-weight:600;
+    cursor:pointer;border:1px solid transparent;
+  }
+  .btn-purple{background:var(--purple);color:#fff;}
+  .btn-outline-dark{background:transparent;border:1px solid rgba(255,255,255,.5);color:#fff;}
+  .btn-outline{background:transparent;border:1px solid var(--ink);color:var(--ink);}
+  .btn-dark{background:var(--navy);color:#fff;}
+  .badge{
+    display:inline-block;font-size:10px;letter-spacing:.06em;text-transform:uppercase;
+    font-weight:700;padding:3px 8px;border-radius:3px;
+  }
+  section{padding:56px 0;}
+  .section-head{margin-bottom:26px;max-width:640px;}
+  .section-head .eyebrow{color:var(--purple);margin-bottom:8px;}
+  .section-head h2{font-size:26px;margin-bottom:10px;}
+  .section-head p{color:#56524a;font-size:14.5px;}
+
+  /* ---------- MINI HEADER ---------- */
+  .kids-header{background:var(--navy);padding:14px 0;}
+  .kids-topbar{display:flex;align-items:center;justify-content:space-between;}
+  .back-link{color:#D8D5E8;font-size:13px;font-weight:600;display:flex;align-items:center;gap:6px;}
+  .back-link:hover{color:#fff;}
+  .kids-header-mark{display:flex;align-items:center;gap:8px;}
+  .kids-header-mark span{font-family:Georgia,serif;font-weight:700;font-size:13.5px;color:#D6D3E8;}
+
+  /* ---------- KIDS HERO ---------- */
+  .kids-hero{background:linear-gradient(135deg,#F6D9C9,#F3E3C7);}
+  .kids-hero-grid{display:grid;grid-template-columns:1fr auto;align-items:center;gap:30px;}
+  .kids-hero .eyebrow{color:var(--brick);margin-bottom:6px;}
+  .kids-hero h1{font-size:32px;color:var(--brick);margin-bottom:10px;}
+  .kids-hero p{font-size:14px;color:#5b5640;max-width:440px;margin-bottom:18px;}
+  .kids-sun{width:110px;height:110px;border-radius:50%;background:var(--gold);}
+
+  /* ---------- KIDS FEATURED STORY ---------- */
+  .kids-story{background:var(--paper);}
+  .kids-story-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:18px;margin-top:10px;}
+  .kids-video{background:#181E39;border-radius:8px;min-height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;}
+  .kids-video .play-btn{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;}
+  .kids-video .vlabel{color:#fff;font-size:13px;font-weight:600;}
+  .kids-video .vmeta{color:#B7B3D6;font-size:11px;}
+  .try-home{background:var(--cream);border-radius:8px;padding:18px;}
+  .try-home h4{font-size:14px;color:var(--brick);margin-bottom:12px;text-align:center;}
+  .try-item{background:#fff;border-radius:6px;padding:10px 12px;margin-bottom:8px;}
+  .try-item .ti-title{font-size:12.5px;font-weight:700;}
+  .try-item .ti-sub{font-size:11px;color:#8a8676;}
+
+  /* ---------- BROWSE BY AGE ---------- */
+  .kids-age{background:#fff;}
+  .age-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:10px;}
+  .age-card{border-radius:8px;padding:20px;text-align:center;}
+  .age-card h4{font-size:16px;margin-bottom:8px;}
+  .age-card p{font-size:12px;color:#5b5640;margin-bottom:10px;}
+  .age-card .age-meta{font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;opacity:.7;}
+  .age-card .age-grade{font-size:11.5px;font-weight:700;color:#6b6550;margin-bottom:8px;}
+  .age-1{background:#F1E7B0;}
+  .age-2{background:#F4D8B6;}
+  .age-3{background:#F4D2DC;}
+
+  /* ---------- FOR TEACHERS / PARENTS ---------- */
+  .kids-teachers{background:var(--navy);color:#fff;}
+  .kids-teachers h2{font-size:22px;max-width:560px;margin:8px 0 10px;}
+  .kids-teachers p{color:#C7C3DA;font-size:13.5px;max-width:560px;margin-bottom:16px;}
+  .kids-parents{background:var(--cream);}
+  .kids-parents .eyebrow{color:var(--brick);}
+  .kids-parents h2{font-size:22px;color:var(--brick);max-width:560px;margin:8px 0 10px;}
+  .kids-parents p{color:#5b5640;font-size:13.5px;max-width:560px;margin-bottom:16px;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--navy-2);color:#A9A6C2;padding:34px 0;}
+  .footer-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:22px;}
+  .footer-cols{display:flex;gap:48px;}
+  .footer-cols h5{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:#7d7aa0;margin-bottom:10px;}
+  .footer-cols ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;font-size:12.5px;}
+  .footer-bottom{border-top:1px solid #2c3158;padding-top:16px;font-size:11.5px;color:#6f6c92;}
+  .logo-lockup{display:flex;align-items:center;gap:10px;}
+
+  @media (max-width:760px){
+    .kids-hero-grid,.kids-story-grid,.age-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<!-- MINI HEADER -->
+<header class="kids-header">
+  <div class="wrap kids-topbar">
+    <a class="back-link" href="index.html">&larr; Back to Shared Prosperity</a>
+    <div class="kids-header-mark">
+      <svg width="22" height="22" viewBox="0 0 100 100" fill="none">
+        <circle cx="50" cy="58" r="28" stroke="#B79AE0" stroke-width="6"/>
+        <path d="M50 22 L66 50 L34 50 Z" fill="#B79AE0"/>
+        <circle cx="76" cy="26" r="7" fill="#E8A93B"/>
+      </svg>
+      <span>Shared Prosperity Kids</span>
+    </div>
+  </div>
+</header>
+
+<!-- KIDS HERO -->
+<section class="kids-hero" id="kids">
+  <div class="wrap kids-hero-grid">
+    <div>
+      <div class="eyebrow">Welcome To</div>
+      <h1>Shared Prosperity Kids!</h1>
+      <p>Big ideas about how communities work, told in 5 minutes — for ages 8 to 14.</p>
+    </div>
+    <div class="kids-sun"></div>
+  </div>
+</section>
+
+<!-- KIDS FEATURED STORY (Prometheus) -->
+<section class="kids-story" id="kids-story">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Prometheus — The Gift of Fire</h2>
+      <p>Prometheus reminds us that the most enduring institutions are built by those willing to give away what they could have kept. Opportunity, like fire, is meant to be shared.</p>
+    </div>
+    <div class="kids-story-grid">
+      <a class="kids-video" href="https://youtu.be/XWdv73xH7wQ" target="_blank" rel="noopener" style="text-decoration:none;">
+        <div class="play-btn" style="background:var(--gold);width:54px;height:54px;font-size:18px;">▶</div>
+        <div class="vlabel">Play (0:26)</div>
+        <div class="vmeta">Animated illustrated short</div>
+      </a>
+      <div class="try-home">
+        <h4>Try this at home!</h4>
+        <div class="try-item">
+          <div class="ti-title">Coloring Page</div>
+          <div class="ti-sub">Print a scene from the story</div>
+        </div>
+        <div class="try-item">
+          <div class="ti-title">Talk About It</div>
+          <div class="ti-sub">3 questions for your family</div>
+        </div>
+        <div class="try-item">
+          <div class="ti-title">Find Out More</div>
+          <div class="ti-sub">Mini word search</div>
+        </div>
+        <a class="btn btn-dark" style="background:var(--brick);width:100%;text-align:center;margin-top:6px;" href="#">Download Activity Pack</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BROWSE BY AGE -->
+<section class="kids-age">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" style="color:var(--brick);">Browse By Age</div>
+      <h2>Pick what's right for your kids</h2>
+    </div>
+    <div class="age-grid">
+      <div class="age-card age-1">
+        <h4>Ages 8–10</h4>
+        <div class="age-grade">3rd–4th Grade</div>
+        <p>Bigger ideas: schools, jobs, and what cities decide together.</p>
+        <div class="age-meta">When the Time Is Right</div>
+      </div>
+      <div class="age-card age-2">
+        <h4>Ages 10–12</h4>
+        <div class="age-grade">5th–6th Grade</div>
+        <p>Real decisions, real leaders, real questions for the future.</p>
+        <div class="age-meta">When the Time Is Right</div>
+      </div>
+      <div class="age-card age-3">
+        <h4>Ages 12–14</h4>
+        <div class="age-grade">7th–8th Grade</div>
+        <p>How power, history, and policy shape the choices ahead.</p>
+        <div class="age-meta">When the Time Is Right</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOR TEACHERS -->
+<section class="kids-teachers" id="kids-teachers">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--gold);">For Teachers</div>
+    <h2>Bring civic learning to your classroom.</h2>
+    <p>Each video comes with a lesson plan, discussion questions, and a classroom-ready project. Free. Adaptable to your group.</p>
+    <a class="btn" style="background:var(--gold);color:var(--navy);" href="#">Teacher Resources →</a>
+  </div>
+</section>
+
+<!-- FOR PARENTS -->
+<section class="kids-parents">
+  <div class="wrap">
+    <div class="eyebrow">For Parents</div>
+    <h2>Watch together. Talk together.</h2>
+    <p>Every video has a short "Talk About It" guide with three questions to ask your kids. No prep needed. Just good conversations about how communities take care of each other.</p>
+    <a class="btn btn-dark" style="background:var(--brick);" href="#">Family Activities →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="logo-lockup">
+        <svg width="26" height="26" viewBox="0 0 100 100" fill="none">
+          <circle cx="50" cy="58" r="28" stroke="#7C5BB0" stroke-width="6"/>
+          <path d="M50 22 L66 50 L34 50 Z" fill="#7C5BB0"/>
+          <circle cx="76" cy="26" r="7" fill="#E8A93B"/>
+        </svg>
+        <span style="font-family:Georgia,serif;font-weight:700;font-size:14px;color:#D6D3E8;">Shared Prosperity Kids</span>
+      </div>
+      <div class="footer-cols">
+        <div>
+          <h5>Shared Prosperity</h5>
+          <ul>
+            <li><a href="index.html">Main Site</a></li>
+            <li><a href="index.html#episodes">Episodes</a></li>
+            <li><a href="index.html#about">About</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>For Grown-Ups</h5>
+          <ul>
+            <li><a href="#kids-teachers">Teachers</a></li>
+            <li><a href="#">Parents</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Shared Prosperity Media Venture. A civic media project rooted in Pittsfield, Massachusetts.</div>
+  </div>
+</footer>
+
+</body>
+</html>
