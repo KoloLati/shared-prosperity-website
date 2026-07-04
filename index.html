@@ -5,590 +5,564 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shared Prosperity — Local America, Global Opportunity</title>
 <style>
-  :root{
-    --navy:#181E39;
-    --navy-2:#1F2747;
-    --purple:#6B3FA0;
-    --purple-dark:#5A2F8C;
-    --teal:#1E7A6C;
-    --brick:#9B3D24;
-    --gold:#E8A93B;
-    --cream:#F6E6B4;
-    --cream-2:#F1DD9E;
-    --ink:#1B1B1B;
-    --paper:#FBFAF6;
-    --line:#E7E2D4;
-  }
-  *{box-sizing:border-box;}
-  body{margin:0;font-family:'Helvetica Neue',Arial,sans-serif;color:var(--ink);background:var(--paper);}
-  h1,h2,h3,h4{margin:0;font-family:Georgia,'Times New Roman',serif;}
-  p{margin:0;line-height:1.55;}
-  a{text-decoration:none;color:inherit;}
-  .eyebrow{
-    font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;
-  }
-  .wrap{max-width:1080px;margin:0 auto;padding:0 28px;}
-  .btn{
-    display:inline-block;padding:11px 20px;border-radius:5px;font-size:14px;font-weight:600;
-    cursor:pointer;border:1px solid transparent;
-  }
-  .btn-purple{background:var(--purple);color:#fff;}
-  .btn-outline-dark{background:transparent;border:1px solid rgba(255,255,255,.5);color:#fff;}
-  .btn-outline{background:transparent;border:1px solid var(--ink);color:var(--ink);}
-  .btn-dark{background:var(--navy);color:#fff;}
-  .badge{
-    display:inline-block;font-size:10px;letter-spacing:.06em;text-transform:uppercase;
-    font-weight:700;padding:3px 8px;border-radius:3px;
-  }
+:root{
+--navy:#181E39;
+--navy-2:#1F2747;
+--purple:#6B3FA0;
+--purple-dark:#5A2F8C;
+--teal:#1E7A6C;
+--brick:#9B3D24;
+--gold:#E8A93B;
+--cream:#F6E6B4;
+--cream-2:#F1DD9E;
+--ink:#1B1B1B;
+--paper:#FBFAF6;
+--line:#E7E2D4;
+}
+*{box-sizing:border-box;}
+body{margin:0;font-family:'Helvetica Neue',Arial,sans-serif;color:var(--ink);background:var(--paper);}
+h1,h2,h3,h4{margin:0;font-family:Georgia,'Times New Roman',serif;}
+p{margin:0;line-height:1.55;}
+a{text-decoration:none;color:inherit;}
+.eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px;}
+.btn{display:inline-block;padding:11px 20px;border-radius:5px;font-size:14px;font-weight:600;cursor:pointer;border:1px solid transparent;}
+.btn-purple{background:var(--purple);color:#fff;}
+.btn-outline-dark{background:transparent;border:1px solid rgba(255,255,255,.5);color:#fff;}
+.btn-outline{background:transparent;border:1px solid var(--ink);color:var(--ink);}
+.btn-dark{background:var(--navy);color:#fff;}
+.badge{display:inline-block;font-size:10px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;padding:3px 8px;border-radius:3px;}
 
-  /* ---------- LOGO ---------- */
-  .logo-mark{display:inline-flex;align-items:center;justify-content:center;}
-  .logo-lockup{display:flex;align-items:center;gap:10px;}
-  .logo-word{font-family:Georgia,serif;font-weight:700;line-height:1.05;}
-  .logo-word .top{display:block;font-size:17px;letter-spacing:.01em;}
-  .logo-word .tag{display:block;font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;font-weight:500;opacity:.75;font-family:'Helvetica Neue',Arial,sans-serif;}
+/* ── PITCH BANNER ── */
+.pitch-banner {
+  background: #0e1020;
+  padding: 60px 0;
+  border-bottom: 3px solid var(--gold);
+}
+.pitch-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 28px;
+  text-align: center;
+}
+.pitch-label {
+  font-size: 10px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.pitch-label::before,
+.pitch-label::after {
+  content: '';
+  display: inline-block;
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+}
+.pitch-text {
+  font-family: Georgia, serif;
+  font-size: clamp(1.25rem, 2.5vw, 1.65rem);
+  line-height: 1.65;
+  color: #f0ecdf;
+  font-style: italic;
+  margin-bottom: 32px;
+}
+.pitch-text strong {
+  font-style: normal;
+  color: #fff;
+  font-weight: 700;
+}
+.pitch-text em.highlight {
+  font-style: normal;
+  color: var(--gold);
+  font-weight: 600;
+}
+.pitch-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--gold);
+  color: #0e1020;
+  padding: 12px 28px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background .3s;
+}
+.pitch-cta:hover { background: #f0c04a; }
 
-  /* ---------- HEADER ---------- */
-  header{background:#fff;padding:16px 0;border-bottom:1px solid var(--line);}
-  .topbar{display:flex;align-items:center;justify-content:space-between;}
-  nav ul{list-style:none;display:flex;gap:26px;margin:0;padding:0;}
-  nav a{color:#4a4636;font-size:13.5px;font-weight:500;}
-  nav a:hover{color:var(--purple);}
-  .header-right{display:flex;align-items:center;gap:18px;}
-
-  /* ---------- HERO ---------- */
-  .hero{background:var(--navy);padding:50px 0 70px;color:#fff;}
-  .hero-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;}
-  .hero h1{font-size:40px;line-height:1.12;margin:10px 0 16px;}
-  .hero p.lead{color:#C7C3DA;font-size:15px;max-width:440px;margin-bottom:24px;}
-  .hero .eyebrow{color:var(--gold);}
-  .hero-actions{display:flex;gap:10px;}
-  .player-card{background:#fff;border-radius:8px;padding:18px;color:var(--ink);}
-  .player-card .label{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#777;font-weight:700;margin-bottom:10px;}
-  .player-row{display:flex;align-items:center;gap:12px;}
-  .play-btn{width:38px;height:38px;border-radius:50%;background:var(--purple);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-  .track-line{height:4px;background:#eee;border-radius:2px;margin-top:8px;position:relative;}
-  .track-line::after{content:'';position:absolute;left:0;top:0;height:100%;width:35%;background:var(--purple);border-radius:2px;}
-
-  /* ---------- SECTION GENERIC ---------- */
-  section{padding:56px 0;}
-  .section-head{margin-bottom:26px;max-width:640px;}
-  .section-head .eyebrow{color:var(--purple);margin-bottom:8px;}
-  .section-head h2{font-size:26px;margin-bottom:10px;}
-  .section-head p{color:#56524a;font-size:14.5px;}
-
-  /* ---------- LOGO SHOWCASE ---------- */
-  .logo-showcase{background:var(--cream);}
-  .logo-showcase .section-head .eyebrow{color:var(--brick);}
-  .logo-panels{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;}
-  .logo-panel{border-radius:8px;padding:30px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;min-height:150px;}
-  .logo-panel.light{background:#fff;border:1px solid var(--line);}
-  .logo-panel.dark{background:var(--navy);}
-  .logo-panel .caption{font-size:11.5px;color:#8a8470;}
-  .logo-panel.dark .caption{color:#9b97b8;}
-  .icon-row{display:flex;align-items:center;gap:28px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:26px;justify-content:center;}
-  .icon-size-label{font-size:10px;color:#8a8470;text-align:center;margin-top:6px;}
-  .usage-note{margin-top:16px;font-size:13px;color:#5b5640;background:#fff;border:1px solid var(--line);border-radius:6px;padding:14px 16px;}
-
-  /* ---------- EPISODES ---------- */
-  .episodes{background:var(--paper);}
-  .episode-note{
-    background:#F4F0FF;border:1px solid #DCD1F2;border-radius:6px;padding:14px 16px;
-    font-size:13px;color:#4a3a6b;margin-bottom:26px;
-  }
-  .episode-note b{color:var(--purple-dark);}
-  .ep-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:20px;}
-  .ep-card{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;}
-  .ep-card-top{padding:16px 16px 12px;border-bottom:1px solid var(--line);}
-  .ep-card-top .eptitle{font-family:Georgia,serif;font-size:16px;margin:6px 0 4px;}
-  .ep-card-top .epmeta{font-size:11px;color:#8a8676;}
-  .ep-split{display:grid;grid-template-columns:1fr;}
-  .ep-part{padding:14px 16px;font-size:12.5px;}
-  .ep-part+.ep-part{border-top:1px solid var(--line);}
-  .ep-part .badge{margin-bottom:8px;}
-  .ep-part .part-desc{color:#6b675c;font-size:12px;line-height:1.45;}
-  .badge-brief{background:#E5EEFB;color:#1F4E8C;}
-  .badge-conv{background:#FBE7E0;color:var(--brick);}
-  .avatar-mini{width:24px;height:24px;border-radius:50%;background:var(--purple);color:#fff;font-size:10px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;margin-right:6px;}
-
-  /* ---------- FOUNDING STORY ---------- */
-  .story{background:var(--cream);}
-  .story-grid{display:grid;grid-template-columns:0.8fr 1.2fr;gap:30px;align-items:center;}
-  .story-photo{background:var(--cream-2);border-radius:6px;height:230px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:16px;}
-  .story-photo .name{font-weight:700;font-size:13.5px;margin-top:10px;}
-  .story-photo .role{font-size:11px;color:#7a7553;}
-  .story-right .eyebrow{color:var(--brick);}
-  .story-right h2{font-size:24px;margin:8px 0 12px;}
-  .story-right p{font-size:14px;color:#4a4636;margin-bottom:10px;}
-  .story-right .pull{font-style:italic;color:var(--brick);font-weight:600;}
-  .story-video{
-    margin-top:14px;background:#181E39;border-radius:6px;padding:14px 16px;
-    display:flex;align-items:center;gap:12px;max-width:420px;cursor:pointer;
-  }
-  .story-video .play-btn{background:var(--brick);}
-  .story-video .vlabel{color:#fff;font-size:13px;font-weight:700;}
-  .story-video .vmeta{color:#B7B3D6;font-size:11px;margin-top:2px;}
-
-  /* ---------- VISION & BELIEFS ---------- */
-  .vision{background:#fff;border-top:1px solid var(--line);}
-  .vision .eyebrow{color:var(--teal);}
-  .vision-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px;}
-  .vision-card{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:26px 18px;text-align:center;display:flex;align-items:center;justify-content:center;min-height:90px;}
-  .vision-card h4{font-size:16px;color:var(--teal);font-family:Georgia,serif;line-height:1.35;}
-
-  /* ---------- OUR IMPACT ---------- */
-  .impact{background:var(--paper);border-top:1px solid var(--line);}
-  .impact .eyebrow{color:var(--purple);}
-  .impact .section-head{max-width:760px;}
-
-  /* ---------- AMERICA 250 ---------- */
-  .america250{background:var(--navy);color:#fff;}
-  .america250 .eyebrow{color:var(--gold);}
-  .america250 .section-head{max-width:760px;}
-  .america250 .section-head p{color:#C7C3DA;}
-  .america250-images{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px;}
-  .america250-images div{background:#1F2747;border-radius:8px;padding:24px;display:flex;flex-direction:column;align-items:center;gap:10px;}
-  .america250-images .imgcap{font-size:11.5px;color:#B7B3D6;text-align:center;}
-
-  /* ---------- TEAM ---------- */
-  .team{background:var(--cream);}
-  .team .eyebrow{color:var(--brick);}
-  .team-status{border:1.5px dashed #d8cf9e;border-radius:8px;padding:36px;text-align:center;background:#fff;}
-  .team-status .when{font-size:11px;color:#a39b78;text-transform:uppercase;letter-spacing:.06em;font-weight:700;}
-
-  /* ---------- PROGRAMS ---------- */
-  .live-card{border:2px solid var(--teal);border-radius:8px;padding:20px 22px;display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:30px;}
-  .live-card h3{font-size:18px;margin:6px 0 8px;}
-  .live-card p{font-size:13px;color:#5b5640;max-width:480px;}
-  .live-tag{background:#DFF3EC;color:var(--teal);}
-  .live-actions{display:flex;flex-direction:column;gap:8px;flex-shrink:0;}
-  .meta-row{display:flex;gap:14px;font-size:11px;color:#8a8676;margin-top:10px;}
-
-  .program-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:40px;}
-  .program-card{background:var(--cream);border-radius:6px;padding:16px;min-height:120px;}
-  .program-card .badge{margin-bottom:8px;}
-  .program-card h4{font-size:14.5px;margin:0 0 6px;}
-  .program-card p{font-size:12px;color:#5b5640;}
-  .tag-build{background:#E7DCF6;color:var(--purple-dark);}
-  .tag-design{background:#FBE2D2;color:var(--brick);}
-  .tag-candidate{background:#FBE7E0;color:#7a4a30;}
-
-  .candidate-block{margin-bottom:40px;}
-  .candidate-block h3{font-size:18px;margin:6px 0 8px;}
-  .candidate-block p.sub{font-size:13px;color:#56524a;max-width:600px;margin-bottom:18px;}
-  .candidate-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
-  .candidate-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:16px;}
-  .candidate-card .badge{margin-bottom:8px;}
-  .candidate-card h4{font-size:14px;margin:0 0 6px;}
-  .candidate-card p{font-size:12px;color:#5b5640;}
-
-  .horizon-block{border-top:1px solid var(--line);padding-top:30px;}
-  .horizon-block .eyebrow{color:var(--gold-text,#A87A1C);}
-  .horizon-block h2{font-size:22px;margin:8px 0 10px;}
-  .horizon-block p.sub{font-size:13.5px;color:#56524a;max-width:560px;margin-bottom:24px;}
-  .horizon-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
-  .horizon-card{border:1px solid var(--line);border-radius:6px;padding:16px;background:#fff;}
-  .horizon-card h4{font-size:14px;margin-bottom:6px;}
-  .horizon-card .when{font-size:11px;color:#a39b78;text-transform:uppercase;letter-spacing:.05em;margin-top:8px;}
-
-  /* ---------- KIDS HERO ---------- */
-  .kids-hero{background:linear-gradient(135deg,#F6D9C9,#F3E3C7);}
-  .kids-hero-grid{display:grid;grid-template-columns:1fr auto;align-items:center;gap:30px;}
-  .kids-hero .eyebrow{color:var(--brick);margin-bottom:6px;}
-  .kids-hero h1{font-size:32px;color:var(--brick);margin-bottom:10px;}
-  .kids-hero p{font-size:14px;color:#5b5640;max-width:440px;margin-bottom:18px;}
-  .kids-sun{width:110px;height:110px;border-radius:50%;background:var(--gold);}
-
-  /* ---------- NEWSLETTER ---------- */
-  .newsletter{background:var(--navy);color:#fff;text-align:left;}
-  .newsletter .eyebrow{color:var(--gold);margin-bottom:10px;}
-  .newsletter h2{font-size:22px;max-width:560px;margin-bottom:10px;}
-  .newsletter p{color:#C7C3DA;font-size:13.5px;margin-bottom:18px;}
-  .news-form{display:flex;gap:10px;max-width:420px;}
-  .news-form input{flex:1;padding:11px 14px;border-radius:5px;border:1px solid #3a3f63;background:#222850;color:#fff;font-size:13px;}
-
-  /* ---------- FOOTER ---------- */
-  footer{background:#fff;color:#56524a;padding:34px 0;border-top:1px solid var(--line);}
-  .footer-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:22px;}
-  .footer-cols{display:flex;gap:48px;}
-  .footer-cols h5{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:#8a8676;margin-bottom:10px;}
-  .footer-cols ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;font-size:12.5px;}
-  .footer-bottom{border-top:1px solid var(--line);padding-top:16px;font-size:11.5px;color:#8a8676;}
-
-  @media (max-width:760px){
-    .hero-grid,.story-grid,.logo-panels,.ep-grid,.program-grid,.horizon-grid,.kids-hero-grid{grid-template-columns:1fr;}
-    nav{display:none;}
-  }
+.logo-mark{display:inline-flex;align-items:center;justify-content:center;}
+.logo-lockup{display:flex;align-items:center;gap:10px;}
+.logo-word{font-family:Georgia,serif;font-weight:700;line-height:1.05;}
+.logo-word .top{display:block;font-size:17px;letter-spacing:.01em;}
+.logo-word .tag{display:block;font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;font-weight:500;opacity:.75;font-family:'Helvetica Neue',Arial,sans-serif;}
+header{background:#fff;padding:16px 0;border-bottom:1px solid var(--line);}
+.topbar{display:flex;align-items:center;justify-content:space-between;}
+nav ul{list-style:none;display:flex;gap:26px;margin:0;padding:0;}
+nav a{color:#4a4636;font-size:13.5px;font-weight:500;}
+nav a:hover{color:var(--purple);}
+.header-right{display:flex;align-items:center;gap:18px;}
+.hero{background:var(--navy);padding:50px 0 70px;color:#fff;}
+.hero-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;}
+.hero h1{font-size:40px;line-height:1.12;margin:10px 0 16px;}
+.hero p.lead{color:#C7C3DA;font-size:15px;max-width:440px;margin-bottom:24px;}
+.hero .eyebrow{color:var(--gold);}
+.hero-actions{display:flex;gap:10px;}
+.player-card{background:#fff;border-radius:8px;padding:18px;color:var(--ink);}
+.player-card .label{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#777;font-weight:700;margin-bottom:10px;}
+.player-row{display:flex;align-items:center;gap:12px;}
+.play-btn{width:38px;height:38px;border-radius:50%;background:var(--purple);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.track-line{height:4px;background:#eee;border-radius:2px;margin-top:8px;position:relative;}
+.track-line::after{content:'';position:absolute;left:0;top:0;height:100%;width:35%;background:var(--purple);border-radius:2px;}
+section{padding:56px 0;}
+.section-head{margin-bottom:26px;max-width:640px;}
+.section-head .eyebrow{color:var(--purple);margin-bottom:8px;}
+.section-head h2{font-size:26px;margin-bottom:10px;}
+.section-head p{color:#56524a;font-size:14.5px;}
+.logo-showcase{background:var(--cream);}
+.logo-showcase .section-head .eyebrow{color:var(--brick);}
+.logo-panels{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;}
+.logo-panel{border-radius:8px;padding:30px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;min-height:150px;}
+.logo-panel.light{background:#fff;border:1px solid var(--line);}
+.logo-panel.dark{background:var(--navy);}
+.logo-panel .caption{font-size:11.5px;color:#8a8470;}
+.logo-panel.dark .caption{color:#9b97b8;}
+.icon-row{display:flex;align-items:center;gap:28px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:26px;justify-content:center;}
+.icon-size-label{font-size:10px;color:#8a8470;text-align:center;margin-top:6px;}
+.usage-note{margin-top:16px;font-size:13px;color:#5b5640;background:#fff;border:1px solid var(--line);border-radius:6px;padding:14px 16px;}
+.episodes{background:var(--paper);}
+.episode-note{background:#F4F0FF;border:1px solid #DCD1F2;border-radius:6px;padding:14px 16px;font-size:13px;color:#4a3a6b;margin-bottom:26px;}
+.episode-note b{color:var(--purple-dark);}
+.ep-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:20px;}
+.ep-card{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;}
+.ep-card-top{padding:16px 16px 12px;border-bottom:1px solid var(--line);}
+.ep-card-top .eptitle{font-family:Georgia,serif;font-size:16px;margin:6px 0 4px;}
+.ep-card-top .epmeta{font-size:11px;color:#8a8676;}
+.ep-split{display:grid;grid-template-columns:1fr;}
+.ep-part{padding:14px 16px;font-size:12.5px;}
+.ep-part+.ep-part{border-top:1px solid var(--line);}
+.ep-part .badge{margin-bottom:8px;}
+.ep-part .part-desc{color:#6b675c;font-size:12px;line-height:1.45;}
+.badge-brief{background:#E5EEFB;color:#1F4E8C;}
+.badge-conv{background:#FBE7E0;color:var(--brick);}
+.avatar-mini{width:24px;height:24px;border-radius:50%;background:var(--purple);color:#fff;font-size:10px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;margin-right:6px;}
+.story{background:var(--cream);}
+.story-grid{display:grid;grid-template-columns:0.8fr 1.2fr;gap:30px;align-items:center;}
+.story-photo{background:var(--cream-2);border-radius:6px;height:230px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:16px;}
+.story-photo .name{font-weight:700;font-size:13.5px;margin-top:10px;}
+.story-photo .role{font-size:11px;color:#7a7553;}
+.story-right .eyebrow{color:var(--brick);}
+.story-right h2{font-size:24px;margin:8px 0 12px;}
+.story-right p{font-size:14px;color:#4a4636;margin-bottom:10px;}
+.story-right .pull{font-style:italic;color:var(--brick);font-weight:600;}
+.story-video{margin-top:14px;background:#181E39;border-radius:6px;padding:14px 16px;display:flex;align-items:center;gap:12px;max-width:420px;cursor:pointer;}
+.story-video .play-btn{background:var(--brick);}
+.story-video .vlabel{color:#fff;font-size:13px;font-weight:700;}
+.story-video .vmeta{color:#B7B3D6;font-size:11px;margin-top:2px;}
+.vision{background:#fff;border-top:1px solid var(--line);}
+.vision .eyebrow{color:var(--teal);}
+.vision-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px;}
+.vision-card{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:26px 18px;text-align:center;display:flex;align-items:center;justify-content:center;min-height:90px;}
+.vision-card h4{font-size:16px;color:var(--teal);font-family:Georgia,serif;line-height:1.35;}
+.impact{background:var(--paper);border-top:1px solid var(--line);}
+.impact .eyebrow{color:var(--purple);}
+.impact .section-head{max-width:760px;}
+.america250{background:var(--navy);color:#fff;}
+.america250 .eyebrow{color:var(--gold);}
+.america250 .section-head{max-width:760px;}
+.america250 .section-head p{color:#C7C3DA;}
+.america250-images{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px;}
+.america250-images div{background:#1F2747;border-radius:8px;padding:24px;display:flex;flex-direction:column;align-items:center;gap:10px;}
+.america250-images .imgcap{font-size:11.5px;color:#B7B3D6;text-align:center;}
+.team{background:var(--cream);}
+.team .eyebrow{color:var(--brick);}
+.team-status{border:1.5px dashed #d8cf9e;border-radius:8px;padding:36px;text-align:center;background:#fff;}
+.team-status .when{font-size:11px;color:#a39b78;text-transform:uppercase;letter-spacing:.06em;font-weight:700;}
+.live-card{border:2px solid var(--teal);border-radius:8px;padding:20px 22px;display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:30px;}
+.live-card h3{font-size:18px;margin:6px 0 8px;}
+.live-card p{font-size:13px;color:#5b5640;max-width:480px;}
+.live-tag{background:#DFF3EC;color:var(--teal);}
+.live-actions{display:flex;flex-direction:column;gap:8px;flex-shrink:0;}
+.meta-row{display:flex;gap:14px;font-size:11px;color:#8a8676;margin-top:10px;}
+.program-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:40px;}
+.program-card{background:var(--cream);border-radius:6px;padding:16px;min-height:120px;}
+.program-card .badge{margin-bottom:8px;}
+.program-card h4{font-size:14.5px;margin:0 0 6px;}
+.program-card p{font-size:12px;color:#5b5640;}
+.tag-build{background:#E7DCF6;color:var(--purple-dark);}
+.tag-design{background:#FBE2D2;color:var(--brick);}
+.tag-candidate{background:#FBE7E0;color:#7a4a30;}
+.candidate-block{margin-bottom:40px;}
+.candidate-block h3{font-size:18px;margin:6px 0 8px;}
+.candidate-block p.sub{font-size:13px;color:#56524a;max-width:600px;margin-bottom:18px;}
+.candidate-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.candidate-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:16px;}
+.candidate-card .badge{margin-bottom:8px;}
+.candidate-card h4{font-size:14px;margin:0 0 6px;}
+.candidate-card p{font-size:12px;color:#5b5640;}
+.horizon-block{border-top:1px solid var(--line);padding-top:30px;}
+.horizon-block .eyebrow{color:var(--gold-text,#A87A1C);}
+.horizon-block h2{font-size:22px;margin:8px 0 10px;}
+.horizon-block p.sub{font-size:13.5px;color:#56524a;max-width:560px;margin-bottom:24px;}
+.horizon-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.horizon-card{border:1px solid var(--line);border-radius:6px;padding:16px;background:#fff;}
+.horizon-card h4{font-size:14px;margin-bottom:6px;}
+.horizon-card .when{font-size:11px;color:#a39b78;text-transform:uppercase;letter-spacing:.05em;margin-top:8px;}
+.kids-hero{background:linear-gradient(135deg,#F6D9C9,#F3E3C7);}
+.kids-hero-grid{display:grid;grid-template-columns:1fr auto;align-items:center;gap:30px;}
+.kids-hero .eyebrow{color:var(--brick);margin-bottom:6px;}
+.kids-hero h1{font-size:32px;color:var(--brick);margin-bottom:10px;}
+.kids-hero p{font-size:14px;color:#5b5640;max-width:440px;margin-bottom:18px;}
+.kids-sun{width:110px;height:110px;border-radius:50%;background:var(--gold);}
+.newsletter{background:var(--navy);color:#fff;text-align:left;}
+.newsletter .eyebrow{color:var(--gold);margin-bottom:10px;}
+.newsletter h2{font-size:22px;max-width:560px;margin-bottom:10px;}
+.newsletter p{color:#C7C3DA;font-size:13.5px;margin-bottom:18px;}
+.news-form{display:flex;gap:10px;max-width:420px;}
+.news-form input{flex:1;padding:11px 14px;border-radius:5px;border:1px solid #3a3f63;background:#222850;color:#fff;font-size:13px;}
+footer{background:#fff;color:#56524a;padding:34px 0;border-top:1px solid var(--line);}
+.footer-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:22px;}
+.footer-cols{display:flex;gap:48px;}
+.footer-cols h5{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:#8a8676;margin-bottom:10px;}
+.footer-cols ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;font-size:12.5px;}
+.footer-bottom{border-top:1px solid var(--line);padding-top:16px;font-size:11.5px;color:#8a8676;}
+@media (max-width:760px){
+.hero-grid,.story-grid,.logo-panels,.ep-grid,.program-grid,.horizon-grid,.kids-hero-grid{grid-template-columns:1fr;}
+nav{display:none;}
+.pitch-text{font-size:1.1rem;}
+}
 </style>
 </head>
 <body>
 
 <!-- HEADER -->
 <header>
-  <div class="wrap topbar">
-    <div class="logo-lockup">
-      <img src="logo-full-transparent-cropped.png" alt="Shared Prosperity — Local America, Global Opportunity" style="height:48px;width:auto;">
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#episodes">Episodes</a></li>
-        <li><a href="kids.html">Kids</a></li>
-        <li><a href="#programs">Programs</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#newsletter">Newsletter</a></li>
-      </ul>
-    </nav>
-    <div class="header-right">
-      <a class="btn btn-purple" href="#newsletter">Subscribe</a>
-    </div>
-  </div>
+<div class="wrap topbar">
+<div class="logo-lockup">
+<img src="logo-full-transparent-cropped.png" alt="Shared Prosperity — Local America, Global Opportunity" style="height:48px;width:auto;">
+</div>
+<nav>
+<ul>
+<li><a href="#episodes">Episodes</a></li>
+<li><a href="kids.html">Kids</a></li>
+<li><a href="#programs">Programs</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#newsletter">Newsletter</a></li>
+</ul>
+</nav>
+<div class="header-right">
+<a class="btn btn-purple" href="#newsletter">Subscribe</a>
+</div>
+</div>
 </header>
+
+<!-- ★ PITCH BANNER ★ -->
+<div class="pitch-banner">
+  <div class="pitch-inner">
+    <div class="pitch-label">Our Mission</div>
+    <p class="pitch-text">
+      <strong>This is Shared Prosperity.</strong> The future of America is not written in Washington or Wall Street —
+      it is written in <em class="highlight">small cities like Pittsfield, Massachusetts.</em>
+      Every month, local leaders make decisions that shape whether your neighborhood thrives or falls behind.
+      But nobody is watching. Nobody is telling that story.
+      <strong>We are.</strong>
+      Shared Prosperity turns those decisions into public understanding — so that when a mayor,
+      a school principal, or a community organizer makes a choice, everyone knows what it means
+      and why it matters. That is how <em class="highlight">local opportunity becomes global prosperity.</em>
+      <strong>That is Shared Prosperity.</strong>
+    </p>
+    <a class="pitch-cta" href="#episodes">Watch Our Episodes ↓</a>
+  </div>
+</div>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <div class="eyebrow">A Civic Media Venture</div>
-      <h1>Local America,<br>Global Opportunity.</h1>
-      <p class="lead">Revealing how decisions made by small-city leaders shape economic opportunity and community resilience — in Pittsfield, and in the thousands of small cities like it.</p>
-      <div class="hero-actions">
-        <a class="btn btn-purple" href="#episodes">Watch Latest</a>
-        <a class="btn btn-outline-dark" href="#episodes">See all Episodes</a>
-      </div>
-    </div>
-    <a class="player-card" href="https://pittsfieldtv.org/program/?id=55947" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block;cursor:pointer;">
-      <div class="label">Featured Episode · Video · Now Playing</div>
-      <div class="player-row">
-        <div class="play-btn">▶</div>
-        <div style="flex:1;">
-          <div style="font-size:13.5px;font-weight:700;">Understanding Pittsfield through current policy</div>
-          <div style="font-size:11px;color:#888;">Video · Brief Talk + Conversation · Episode 1</div>
-          <div class="track-line"></div>
-        </div>
-      </div>
-    </a>
-  </div>
+<div class="wrap hero-grid">
+<div>
+<div class="eyebrow">A Civic Media Venture</div>
+<h1>Local America,<br>Global Opportunity.</h1>
+<p class="lead">Revealing how decisions made by small-city leaders shape economic opportunity and community resilience — in Pittsfield, and in the thousands of small cities like it.</p>
+<div class="hero-actions">
+<a class="btn btn-purple" href="#episodes">Watch Latest</a>
+<a class="btn btn-outline-dark" href="#episodes">See all Episodes</a>
+</div>
+</div>
+<a class="player-card" href="https://pittsfieldtv.org/program/?id=55947" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block;cursor:pointer;">
+<div class="label">Featured Episode · Video · Now Playing</div>
+<div class="player-row">
+<div class="play-btn">▶</div>
+<div style="flex:1;">
+<div style="font-size:13.5px;font-weight:700;">Understanding Pittsfield through current policy</div>
+<div style="font-size:11px;color:#888;">Video · Brief Talk + Conversation · Episode 1</div>
+<div class="track-line"></div>
+</div>
+</div>
+</a>
+</div>
 </section>
 
-<!-- EPISODES (merged Brief Talks + Conversations) -->
+<!-- EPISODES -->
 <section class="episodes" id="episodes">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Episodes</div>
-      <h2>One episode, two formats — for now.</h2>
-      <p>Every episode currently airing on PTCV pairs an 8–12 minute host-led Brief Talk with a 35–45 minute Conversation with a local leader, recorded and released together as a single episode.</p>
-    </div>
-
-    <div class="episode-note">
-      <b>Why one format right now:</b> Season 1 was produced and is airing as combined episodes, so Brief Talks and Conversations aren't separable yet. Each card below shows both halves of the same episode. Starting Season 2, once Brief Talks and Conversations are recorded on independent schedules, they'll split into their own sections and nav tabs.
-      <br><br><b>Release cadence:</b> new episodes release roughly twice a month through November 2026. This list grows one card at a time as each episode airs.
-    </div>
-
-    <div class="ep-grid">
-      <div class="ep-card">
-        <div class="ep-card-top">
-          <div class="epmeta">Episode 1 · May 2026</div>
-          <div class="eptitle">Understanding Pittsfield through current policy</div>
-        </div>
-        <div class="ep-split">
-          <div class="ep-part">
-            <span class="badge badge-brief">Brief Talk · 8 min</span>
-            <div class="part-desc">Dr. Masachs frames the episode's question, anchors it in a Pittsfield example, and sets up what the conversation will test.</div>
-          </div>
-          <div class="ep-part">
-            <span class="badge badge-conv">Conversation · 33 min</span>
-            <div class="part-desc"><span class="avatar-mini">PM</span>Mayor Peter Marchetti, City of Pittsfield, MA</div>
-          </div>
-        </div>
-        <a class="btn btn-outline" style="display:block;text-align:center;margin:0 16px 16px;" href="https://pittsfieldtv.org/program/?id=55947" target="_blank" rel="noopener">Watch on PCTV →</a>
-      </div>
-
-      <div class="ep-card">
-        <div class="ep-card-top">
-          <div class="epmeta">Episode 2 · June 2026</div>
-          <div class="eptitle">Community Media &amp; Civic Learning</div>
-        </div>
-        <div class="ep-split">
-          <div class="ep-part">
-            <span class="badge badge-brief">Brief Talk · 11 min</span>
-            <div class="part-desc">A look at how local media shapes what residents know — and don't know — about decisions affecting them.</div>
-          </div>
-          <div class="ep-part">
-            <span class="badge badge-conv">Conversation · 38 min</span>
-            <div class="part-desc"><span class="avatar-mini">SS</span>Shawn Serre, Executive Director, PCTV</div>
-          </div>
-        </div>
-        <a class="btn btn-outline" style="display:block;text-align:center;margin:0 16px 16px;" href="https://pittsfieldtv.org/program/?id=56186" target="_blank" rel="noopener">Watch on PCTV →</a>
-      </div>
-
-      <div class="ep-card">
-        <div class="ep-card-top">
-          <div class="epmeta">Episode 3 · June 2026</div>
-          <div class="eptitle">How Education Really Works</div>
-        </div>
-        <div class="ep-split">
-          <div class="ep-part">
-            <span class="badge badge-brief">Brief Talk · 10 min</span>
-            <div class="part-desc">What a school budget actually funds, and where the tradeoffs really happen.</div>
-          </div>
-          <div class="ep-part">
-            <span class="badge badge-conv">Conversation · 35 min</span>
-            <div class="part-desc"><span class="avatar-mini">DB</span>Dr. Bishop, Principal, Taconic High School</div>
-          </div>
-        </div>
-        <a class="btn btn-outline" style="display:block;text-align:center;margin:0 16px 16px;" href="https://pittsfieldtv.org/program/?id=56268" target="_blank" rel="noopener">Watch on PCTV →</a>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Episodes</div>
+<h2>One episode, two formats — for now.</h2>
+<p>Every episode currently airing on PTCV pairs an 8–12 minute host-led Brief Talk with a 35–45 minute Conversation with a local leader, recorded and released together as a single episode.</p>
+</div>
+<div class="episode-note">
+<b>Why one format right now:</b> Season 1 was produced and is airing as combined episodes, so Brief Talks and Conversations aren't separable yet. Each card below shows both halves of the same episode. Starting Season 2, once Brief Talks and Conversations are recorded on independent schedules, they'll split into their own sections and nav tabs.
+<br><br><b>Release cadence:</b> new episodes release roughly twice a month through November 2026. This list grows one card at a time as each episode airs.
+</div>
+<div class="ep-grid">
+<div class="ep-card">
+<div class="ep-card-top">
+<div class="epmeta">Episode 1 · May 2026</div>
+<div class="eptitle">Understanding Pittsfield through current policy</div>
+</div>
+<div class="ep-split">
+<div class="ep-part">
+<span class="badge badge-brief">Brief Talk · 8 min</span>
+<div class="part-desc">Dr. Masachs frames the episode's question, anchors it in a Pittsfield example, and sets up what the conversation will test.</div>
+</div>
+<div class="ep-part">
+<span class="badge badge-conv">Conversation · 33 min</span>
+<div class="part-desc"><span class="avatar-mini">PM</span>Mayor Peter Marchetti, City of Pittsfield, MA</div>
+</div>
+</div>
+<a class="btn btn-outline" style="display:block;text-align:center;margin:0 16px 16px;" href="https://pittsfieldtv.org/program/?id=55947" target="_blank" rel="noopener">Watch on PCTV →</a>
+</div>
+<div class="ep-card">
+<div class="ep-card-top">
+<div class="epmeta">Episode 2 · June 2026</div>
+<div class="eptitle">Community Media &amp; Civic Learning</div>
+</div>
+<div class="ep-split">
+<div class="ep-part">
+<span class="badge badge-brief">Brief Talk · 11 min</span>
+<div class="part-desc">A look at how local media shapes what residents know — and don't know — about decisions affecting them.</div>
+</div>
+<div class="ep-part">
+<span class="badge badge-conv">Conversation · 38 min</span>
+<div class="part-desc"><span class="avatar-mini">SS</span>Shawn Serre, Executive Director, PCTV</div>
+</div>
+</div>
+<a class="btn btn-outline" style="display:block;text-align:center;margin:0 16px 16px;" href="https://pittsfieldtv.org/program/?id=56186" target="_blank" rel="noopener">Watch on PCTV →</a>
+</div>
+<div class="ep-card">
+<div class="ep-card-top">
+<div class="epmeta">Episode 3 · June 2026</div>
+<div class="eptitle">How Education Really Works</div>
+</div>
+<div class="ep-split">
+<div class="ep-part">
+<span class="badge badge-brief">Brief Talk · 10 min</span>
+<div class="part-desc">What a school budget actually funds, and where the tradeoffs really happen.</div>
+</div>
+<div class="ep-part">
+<span class="badge badge-conv">Conversation · 35 min</span>
+<div class="part-desc"><span class="avatar-mini">DB</span>Dr. Bishop, Principal, Taconic High School</div>
+</div>
+</div>
+<a class="btn btn-outline" style="display:block;text-align:center;margin:0 16px 16px;" href="https://pittsfieldtv.org/program/?id=56268" target="_blank" rel="noopener">Watch on PCTV →</a>
+</div>
+</div>
+</div>
 </section>
 
 <!-- FOUNDING STORY -->
 <section class="story" id="about">
-  <div class="wrap story-grid">
-    <div class="story-photo" style="background:var(--navy);padding:0;overflow:hidden;">
-      <iframe width="100%" height="100%" style="border:0;display:block;" src="https://www.youtube.com/embed/DTT3wIyX8P4" title="Watch our Founding Story — Dr. Masachs Boungou, Founder and Executive Director" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
-    <div class="story-right">
-      <div class="eyebrow">Our Founding Story</div>
-      <h2>Can a single decision made in a small city change the world?</h2>
-      <p>At twelve, our founder fled civil war in his town and spent over a year in the forest. Years later, he arrived in the United States as an international student. Pittsfield, Massachusetts became home — and that place shaped this venture.</p>
-      <p class="pull">Prosperity does not begin everywhere at once. It begins somewhere — with the choices we make.</p>
-      <a href="https://drmasachsb.com" target="_blank" rel="noopener" style="display:inline-block;margin-top:10px;font-size:12.5px;color:#7a7553;text-decoration:underline;">More about the founder, Dr. Masachs Boungou →</a>
-    </div>
-  </div>
+<div class="wrap story-grid">
+<div class="story-photo" style="background:var(--navy);padding:0;overflow:hidden;">
+<iframe width="100%" height="100%" style="border:0;display:block;" src="https://www.youtube.com/embed/DTT3wIyX8P4" title="Watch our Founding Story — Dr. Masachs Boungou, Founder and Executive Director" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="story-right">
+<div class="eyebrow">Our Founding Story</div>
+<h2>Can a single decision made in a small city change the world?</h2>
+<p>At twelve, our founder fled civil war in his town and spent over a year in the forest. Years later, he arrived in the United States as an international student. Pittsfield, Massachusetts became home — and that place shaped this venture.</p>
+<p class="pull">Prosperity does not begin everywhere at once. It begins somewhere — with the choices we make.</p>
+<a href="https://drmasachsb.com" target="_blank" rel="noopener" style="display:inline-block;margin-top:10px;font-size:12.5px;color:#7a7553;text-decoration:underline;">More about the founder, Dr. Masachs Boungou →</a>
+</div>
+</div>
 </section>
 
-<!-- VISION & BELIEFS (optional section — see note below grid) -->
+<!-- VISION & BELIEFS -->
 <section class="vision">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Our Beliefs</div>
-      <h2>What we hold to be true.</h2>
-    </div>
-    <div class="vision-grid">
-      <div class="vision-card">
-        <h4>Opportunity is created, not given.</h4>
-      </div>
-      <div class="vision-card">
-        <h4>Impact is shared and scalable.</h4>
-      </div>
-      <div class="vision-card">
-        <h4>Local stories are tools for change.</h4>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Our Beliefs</div>
+<h2>What we hold to be true.</h2>
+</div>
+<div class="vision-grid">
+<div class="vision-card"><h4>Opportunity is created, not given.</h4></div>
+<div class="vision-card"><h4>Impact is shared and scalable.</h4></div>
+<div class="vision-card"><h4>Local stories are tools for change.</h4></div>
+</div>
+</div>
 </section>
 
 <!-- AMERICA 250 -->
 <section class="america250">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">America's 250th</div>
-      <h2>Celebrate America's 250th with a Value-Driven Mission.</h2>
-      <p>As our nation approaches its 250 years, the true enduring vision of America remains rooted in the promise that equal opportunity and collective progress are created, not given. Shared Prosperity honors this legacy by proving that the future of American economic resilience is still written at the local level. By transforming the decisions of our small-city leaders into actionable blueprints, we are ensuring that the next chapter of the American story is one where local opportunity still shapes global wealth — proving that when our hometowns thrive, their ideas, skills, and innovations lift communities across the country and beyond.</p>
-    </div>
-  </div>
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">America's 250th</div>
+<h2>Celebrate America's 250th with a Value-Driven Mission.</h2>
+<p>As our nation approaches its 250 years, the true enduring vision of America remains rooted in the promise that equal opportunity and collective progress are created, not given. Shared Prosperity honors this legacy by proving that the future of American economic resilience is still written at the local level. By transforming the decisions of our small-city leaders into actionable blueprints, we are ensuring that the next chapter of the American story is one where local opportunity still shapes global wealth — proving that when our hometowns thrive, their ideas, skills, and innovations lift communities across the country and beyond.</p>
+</div>
+</div>
 </section>
 
 <!-- OUR IMPACT -->
 <section class="impact">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Our Impact</div>
-      <p>Through the support of our partners and collaborators, Shared Prosperity transforms small-city leadership decisions into public understanding and actionable civic insights that benefit our own community, regions across the country, and beyond.</p>
-    </div>
-  </div>
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Our Impact</div>
+<p>Through the support of our partners and collaborators, Shared Prosperity transforms small-city leadership decisions into public understanding and actionable civic insights that benefit our own community, regions across the country, and beyond.</p>
+</div>
+</div>
 </section>
 
 <!-- TEAM -->
 <section class="team">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Our Team</div>
-      <h2>Meet The Minds and Hands Behind Our Venture.</h2>
-    </div>
-    <div class="team-status">
-      <div class="when">When the Time Is Right</div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Our Team</div>
+<h2>Meet The Minds and Hands Behind Our Venture.</h2>
+</div>
+<div class="team-status">
+<div class="when">When the Time Is Right</div>
+</div>
+</div>
 </section>
 
 <!-- PROGRAMS -->
 <section id="programs">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Our Programs</div>
-      <h2>What we build, ship, and grow.</h2>
-    </div>
-
-    <div class="live-card">
-      <div>
-        <span class="badge live-tag">Live now</span>
-        <h3>Shared Prosperity Media Venture</h3>
-        <p>A monthly video series pairing a host-led Brief Talk with a Conversation with a local decision-maker. Recorded at Pittsfield Community Television and Taconic High School. Aired on PCTV and shared on our own YouTube channel.</p>
-        <div class="meta-row"><span>3 episodes released</span><span>2 formats per episode</span><span>Partners: PCTV · Taconic High School</span><span>New episodes roughly twice a month through Nov 2026</span></div>
-      </div>
-      <div class="live-actions">
-        <a class="btn btn-dark" href="https://pittsfieldtv.org/program/?id=56268" target="_blank" rel="noopener">Watch on PCTV →</a>
-        <a class="btn btn-outline" href="#">Watch on YouTube</a>
-      </div>
-    </div>
-
-    <div class="program-grid">
-      <div class="program-card">
-        <span class="badge tag-build">Community engagement</span>
-        <h4>Corps of Volunteers</h4>
-        <p>Direct community service — needs at understood scale, awareness, and engagement, having anyone.</p>
-      </div>
-      <div class="program-card">
-        <span class="badge tag-design">Convening · 2027</span>
-        <h4>The Forum</h4>
-        <p>Annual Pittsfield convening with cross-community learning, civic stakeholders, and public sector leaders.</p>
-      </div>
-      <div class="program-card">
-        <span class="badge tag-design">Talent pipeline · 2027</span>
-        <h4>The Fellowship</h4>
-        <p>An 8–12 week fellowship for high school/college students, featured in part in honor of Dr. Latifah Phillips.</p>
-      </div>
-      <div class="program-card">
-        <span class="badge tag-design">Recognition · 2028</span>
-        <h4>Prize for Resilience</h4>
-        <p>An annual award for a small city that has shown its ability to adapt and embrace adversity as a catalyst for entrepreneurial creativity.</p>
-      </div>
-    </div>
-
-    <div class="candidate-block">
-      <h3>Other Programs</h3>
-      <p class="sub">Ideas being evaluated, not yet committed — listed here alongside Corps of Volunteers, The Forum, The Fellowship, and Prize for Resilience as the fuller program roadmap.</p>
-      <div class="candidate-grid">
-        <div class="candidate-card">
-          <span class="badge tag-candidate">Format R&D · Candidate</span>
-          <h4>Civic Media Innovation Lab</h4>
-          <p>An internal R&D function that tests new civic media formats — documentary video, audio-first segments, illustrated long-form, data dashboards — and publishes what works.</p>
-        </div>
-        <div class="candidate-card">
-          <span class="badge tag-candidate">Cross-Continental · Candidate</span>
-          <h4>Diaspora Bridges Initiative</h4>
-          <p>Connects US small-city leadership with local leadership in small communities across sub-Saharan Africa through co-productions, exchanges, and shared archives.</p>
-        </div>
-        <div class="candidate-card">
-          <span class="badge tag-candidate">Practice Incubator · Candidate</span>
-          <h4>Replication Lab</h4>
-          <p>A light-touch incubator helping communities replicate a playbook from a Shared Prosperity episode, with consulting, peer connections, and a documented record.</p>
-        </div>
-        <div class="candidate-card">
-          <span class="badge tag-candidate">Flagship Publication · Candidate</span>
-          <h4>Annual State of Small Cities Report</h4>
-          <p>An annual report synthesizing the season's coverage into the state of decision-making in American small cities — a citable reference for funders and civic leaders.</p>
-        </div>
-        <div class="candidate-card">
-          <span class="badge tag-candidate">Education · Candidate</span>
-          <h4>Shared Prosperity Schools Curriculum</h4>
-          <p>An adapted version of the venture's storytelling model for high schools and community colleges, with lesson plans and student-production guidance.</p>
-        </div>
-        <div class="candidate-card">
-          <span class="badge tag-candidate">Mentorship · Candidate</span>
-          <h4>Storytellers Apprenticeship Program</h4>
-          <p>A structured mentorship pairing students and early-career creators with Shared Prosperity's team for hands-on civic media training.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="horizon-block">
-      <div class="eyebrow" style="color:#A87A1C;">What's Coming From Shared Prosperity</div>
-      <h2>On The Horizon — When The Time Is Right.</h2>
-      <p class="sub">Once the Corps of Volunteers, The Forum, The Fellowship, and Prize for Resilience are up and running, these are the next ideas in queue — built only when the venture and the team are ready for them.</p>
-      <div class="horizon-grid">
-        <div class="horizon-card">
-          <h4>Shop</h4>
-          <p style="font-size:12px;color:#5b5640;">Branded items, eventually.</p>
-          <div class="when">Future</div>
-        </div>
-        <div class="horizon-card">
-          <h4>Books</h4>
-          <p style="font-size:12px;color:#5b5640;">Long-form thoughts and lessons from the field.</p>
-          <div class="when">Future</div>
-        </div>
-        <div class="horizon-card">
-          <h4>Live Events</h4>
-          <p style="font-size:12px;color:#5b5640;">Public conversations, taping live.</p>
-          <div class="when">Future</div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Our Programs</div>
+<h2>What we build, ship, and grow.</h2>
+</div>
+<div class="live-card">
+<div>
+<span class="badge live-tag">Live now</span>
+<h3>Shared Prosperity Media Venture</h3>
+<p>A monthly video series pairing a host-led Brief Talk with a Conversation with a local decision-maker. Recorded at Pittsfield Community Television and Taconic High School. Aired on PCTV and shared on our own YouTube channel.</p>
+<div class="meta-row"><span>3 episodes released</span><span>2 formats per episode</span><span>Partners: PCTV · Taconic High School</span><span>New episodes roughly twice a month through Nov 2026</span></div>
+</div>
+<div class="live-actions">
+<a class="btn btn-dark" href="https://pittsfieldtv.org/program/?id=56268" target="_blank" rel="noopener">Watch on PCTV →</a>
+<a class="btn btn-outline" href="#">Watch on YouTube</a>
+</div>
+</div>
+<div class="program-grid">
+<div class="program-card"><span class="badge tag-build">Community engagement</span><h4>Corps of Volunteers</h4><p>Direct community service — needs at understood scale, awareness, and engagement, having anyone.</p></div>
+<div class="program-card"><span class="badge tag-design">Convening · 2027</span><h4>The Forum</h4><p>Annual Pittsfield convening with cross-community learning, civic stakeholders, and public sector leaders.</p></div>
+<div class="program-card"><span class="badge tag-design">Talent pipeline · 2027</span><h4>The Fellowship</h4><p>An 8–12 week fellowship for high school/college students, featured in part in honor of Dr. Latifah Phillips.</p></div>
+<div class="program-card"><span class="badge tag-design">Recognition · 2028</span><h4>Prize for Resilience</h4><p>An annual award for a small city that has shown its ability to adapt and embrace adversity as a catalyst for entrepreneurial creativity.</p></div>
+</div>
+<div class="candidate-block">
+<h3>Other Programs</h3>
+<p class="sub">Ideas being evaluated, not yet committed — listed here alongside Corps of Volunteers, The Forum, The Fellowship, and Prize for Resilience as the fuller program roadmap.</p>
+<div class="candidate-grid">
+<div class="candidate-card"><span class="badge tag-candidate">Format R&D · Candidate</span><h4>Civic Media Innovation Lab</h4><p>An internal R&D function that tests new civic media formats — documentary video, audio-first segments, illustrated long-form, data dashboards — and publishes what works.</p></div>
+<div class="candidate-card"><span class="badge tag-candidate">Cross-Continental · Candidate</span><h4>Diaspora Bridges Initiative</h4><p>Connects US small-city leadership with local leadership in small communities across sub-Saharan Africa through co-productions, exchanges, and shared archives.</p></div>
+<div class="candidate-card"><span class="badge tag-candidate">Practice Incubator · Candidate</span><h4>Replication Lab</h4><p>A light-touch incubator helping communities replicate a playbook from a Shared Prosperity episode, with consulting, peer connections, and a documented record.</p></div>
+<div class="candidate-card"><span class="badge tag-candidate">Flagship Publication · Candidate</span><h4>Annual State of Small Cities Report</h4><p>An annual report synthesizing the season's coverage into the state of decision-making in American small cities — a citable reference for funders and civic leaders.</p></div>
+<div class="candidate-card"><span class="badge tag-candidate">Education · Candidate</span><h4>Shared Prosperity Schools Curriculum</h4><p>An adapted version of the venture's storytelling model for high schools and community colleges, with lesson plans and student-production guidance.</p></div>
+<div class="candidate-card"><span class="badge tag-candidate">Mentorship · Candidate</span><h4>Storytellers Apprenticeship Program</h4><p>A structured mentorship pairing students and early-career creators with Shared Prosperity's team for hands-on civic media training.</p></div>
+</div>
+</div>
+<div class="horizon-block">
+<div class="eyebrow" style="color:#A87A1C;">What's Coming From Shared Prosperity</div>
+<h2>On The Horizon — When The Time Is Right.</h2>
+<p class="sub">Once the Corps of Volunteers, The Forum, The Fellowship, and Prize for Resilience are up and running, these are the next ideas in queue — built only when the venture and the team are ready for them.</p>
+<div class="horizon-grid">
+<div class="horizon-card"><h4>Shop</h4><p style="font-size:12px;color:#5b5640;">Branded items, eventually.</p><div class="when">Future</div></div>
+<div class="horizon-card"><h4>Books</h4><p style="font-size:12px;color:#5b5640;">Long-form thoughts and lessons from the field.</p><div class="when">Future</div></div>
+<div class="horizon-card"><h4>Live Events</h4><p style="font-size:12px;color:#5b5640;">Public conversations, taping live.</p><div class="when">Future</div></div>
+</div>
+</div>
+</div>
 </section>
 
-<!-- KIDS TEASER (full Kids Hub lives on its own page) -->
+<!-- KIDS TEASER -->
 <section class="kids-hero" id="kids">
-  <div class="wrap kids-hero-grid">
-    <div>
-      <div class="eyebrow">Welcome To</div>
-      <h1>Shared Prosperity Kids!</h1>
-      <p>Big ideas about how communities work, told in 5 minutes — for ages 8 to 14. This week's story: "Prometheus — The Gift of Fire."</p>
-      <div class="hero-actions">
-        <a class="btn btn-dark" style="background:var(--brick);" href="kids.html">Explore Kids Hub →</a>
-      </div>
-    </div>
-    <div class="kids-sun"></div>
-  </div>
+<div class="wrap kids-hero-grid">
+<div>
+<div class="eyebrow">Welcome To</div>
+<h1>Shared Prosperity Kids!</h1>
+<p>Big ideas about how communities work, told in 5 minutes — for ages 8 to 14. This week's story: "Prometheus — The Gift of Fire."</p>
+<div class="hero-actions">
+<a class="btn btn-dark" style="background:var(--brick);" href="kids.html">Explore Kids Hub →</a>
+</div>
+</div>
+<div class="kids-sun"></div>
+</div>
 </section>
 
 <!-- NEWSLETTER -->
 <section class="newsletter" id="newsletter">
-  <div class="wrap">
-    <div class="eyebrow">Shared Prosperity Monthly</div>
-    <h2>Get one local decision worth understanding in your inbox every month.</h2>
-    <p>Free. Built for the people who run small cities, fund their work, and love them.</p>
-    <div class="news-form">
-      <input type="email" placeholder="you@example.com">
-      <a class="btn btn-purple" href="#">Subscribe</a>
-    </div>
-  </div>
+<div class="wrap">
+<div class="eyebrow">Shared Prosperity Monthly</div>
+<h2>Get one local decision worth understanding in your inbox every month.</h2>
+<p>Free. Built for the people who run small cities, fund their work, and love them.</p>
+<div class="news-form">
+<input type="email" placeholder="you@example.com">
+<a class="btn btn-purple" href="#">Subscribe</a>
+</div>
+</div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="wrap">
-    <div class="footer-top">
-      <div class="logo-lockup">
-        <img src="logo-icon2-transparent-cropped.png" alt="Shared Prosperity" style="height:50px;width:auto;">
-      </div>
-      <div class="footer-cols">
-        <div>
-          <h5>Watch &amp; Listen</h5>
-          <ul>
-            <li><a href="#episodes">Episodes</a></li>
-            <li><a href="kids.html">Kids</a></li>
-            <li><a href="#about">About</a></li>
-          </ul>
-        </div>
-        <div>
-          <h5>Connect</h5>
-          <ul>
-            <li><a href="#newsletter">Newsletter</a></li>
-            <li><a href="#">Watch on PCTV</a></li>
-            <li><a href="#">YouTube</a></li>
-          </ul>
-        </div>
-        <div>
-          <h5>Partners</h5>
-          <ul>
-            <li><a href="#">PCTV</a></li>
-            <li><a href="#">Taconic High School</a></li>
-          </ul>
-        </div>
-        <div>
-          <h5>Support</h5>
-          <ul>
-            <li><a href="#">Donate</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">© 2026 Shared Prosperity Media Venture.</div>
-  </div>
+<div class="wrap">
+<div class="footer-top">
+<div class="logo-lockup">
+<img src="logo-icon2-transparent-cropped.png" alt="Shared Prosperity" style="height:50px;width:auto;">
+</div>
+<div class="footer-cols">
+<div>
+<h5>Watch &amp; Listen</h5>
+<ul>
+<li><a href="#episodes">Episodes</a></li>
+<li><a href="kids.html">Kids</a></li>
+<li><a href="#about">About</a></li>
+</ul>
+</div>
+<div>
+<h5>Connect</h5>
+<ul>
+<li><a href="#newsletter">Newsletter</a></li>
+<li><a href="#">Watch on PCTV</a></li>
+<li><a href="#">YouTube</a></li>
+</ul>
+</div>
+<div>
+<h5>Partners</h5>
+<ul>
+<li><a href="#">PCTV</a></li>
+<li><a href="#">Taconic High School</a></li>
+</ul>
+</div>
+<div>
+<h5>Support</h5>
+<ul>
+<li><a href="#">Donate</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="footer-bottom">© 2026 Shared Prosperity Media Venture.</div>
+</div>
 </footer>
 
 </body>
